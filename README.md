@@ -1,5 +1,5 @@
 # FofaEzSpider
-  本脚本基于python3开发，采用了多线程，支持批量爬取功能。
+  本脚本基于python3开发，采用了多线程，支持批量爬取功能功能。（小垃圾写的垃圾脚本）
   本脚本只实现了简单的爬取url，爬取结果保存为txt。非网页shengc端口如rdp协议，需要使用fofa_prot_1.0.py（cookie需要使用 https://classic.fofa.so 的cookie ，单线程）
 # 使用方法
   使用前需要将cookie填入cookies中。
