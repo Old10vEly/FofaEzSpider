@@ -110,7 +110,7 @@ if __name__ == '__main__':
     if pageend<5: #不足5页采用单线程
         main(search,filename)
     else:
-        max_connections = 10  #线程数
+        max_connections = 5  #线程数
         pool_sema = threading.BoundedSemaphore(max_connections)
         lock = threading.Lock()
         Th(search,filename,pageend)
