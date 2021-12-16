@@ -9,14 +9,7 @@ from lxml import etree
 
 cookies =""
 http = "http"
-#单线程
-def main(search,filename):
-    with open('{}.txt'.format(filename), 'a') as f:
-        for i in range(1, pageend+1):
-            for x in getData(i, search):
-                f.write(x+'\n')
-                f.flush()
-    f.close()
+
 #多线程
 def Th(search,filename,pageend): 
     with open('{}.txt'.format(filename), 'a') as f:
@@ -107,10 +100,8 @@ if __name__ == '__main__':
     if filename == '':
         filename=time.strftime('%Y-%m-%d %H_%M_%S', time.localtime())
     pageend=pageend(search)
-    if pageend<5: #不足5页采用单线程
-        main(search,filename)
-    else:
-        max_connections = 5  #线程数
-        pool_sema = threading.BoundedSemaphore(max_connections)
-        lock = threading.Lock()
-        Th(search,filename,pageend)
+
+    max_connections = 5  #线程数
+    pool_sema = threading.BoundedSemaphore(max_connections)
+    lock = threading.Lock()
+    Th(search,filename,pageend)
