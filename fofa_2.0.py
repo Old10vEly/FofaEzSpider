@@ -3,7 +3,7 @@ from urllib.parse import quote
 import threading   
 import base64
 import time
-import sys
+import os
 import re
 from lxml import etree
 
@@ -75,7 +75,7 @@ def getData(page,search,f):
     else:
         print("请检查cookies是否设置正确")
         f.close()
-        sys.exit()
+        os._exit(1)
     for x in ret:
         f.write(x+'\n')
         f.flush()
