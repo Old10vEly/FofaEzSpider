@@ -9,7 +9,7 @@ from lxml import etree
 
 
 
-cookies ="Cookie: Hm_lvt_b5514a35664fd4ac6a893a1e56956c97=1641263062,1641431526,1641538681,1641554866; Hm_lvt_9490413c5eebdadf757c2be2c816aedf=1641551614,1641551796; Hm_lpvt_b5514a35664fd4ac6a893a1e56956c97=1641780960; befor_router=%2F; fofa_token=eyJhbGciOiJIUzUxMiIsImtpZCI6Ik5XWTVZakF4TVRkalltSTJNRFZsWXpRM05EWXdaakF3TURVMlkyWTNZemd3TUdRd1pUTmpZUT09IiwidHlwIjoiSldUIn0.eyJpZCI6MzIzNDcsIm1pZCI6MTAwMDI0MTg2LCJ1c2VybmFtZSI6Ik9sZDEwdkUiLCJleHAiOjE2NDE4MjQyMzF9.5czhmZGw18L6Yrpt0tstjVtpuqrhTyM9sIcyY0uCroFY7AOMrO_Cc8Fy2Ah4fLqNMEZeTLrmDXGS21yUByVFNA; user=%7B%22id%22%3A32347%2C%22mid%22%3A100024186%2C%22is_admin%22%3Afalse%2C%22username%22%3A%22Old10vE%22%2C%22nickname%22%3A%22%22%2C%22email%22%3A%22547207359%40qq.com%22%2C%22avatar_medium%22%3A%22https%3A%2F%2Fnosec.org%2Fmissing.jpg%22%2C%22avatar_thumb%22%3A%22https%3A%2F%2Fnosec.org%2Fmissing.jpg%22%2C%22rank_name%22%3A%22%E6%99%AE%E9%80%9A%E4%BC%9A%E5%91%98%22%2C%22rank_level%22%3A1%2C%22company_name%22%3A%22%22%2C%22coins%22%3A0%2C%22credits%22%3A45666%2C%22expiration%22%3A%22-%22%2C%22login_at%22%3A1641781031%7D; refresh_token=eyJhbGciOiJIUzUxMiIsImtpZCI6Ik5XWTVZakF4TVRkalltSTJNRFZsWXpRM05EWXdaakF3TURVMlkyWTNZemd3TUdRd1pUTmpZUT09IiwidHlwIjoiSldUIn0.eyJpZCI6MzIzNDcsIm1pZCI6MTAwMDI0MTg2LCJ1c2VybmFtZSI6Ik9sZDEwdkUiLCJleHAiOjE2NDIwNDAyMzEsImlzcyI6InJlZnJlc2gifQ.lJnEm5UJPOX83L4-d8raNVFo-1YoGjl2BpD6exQBIeEsyLuwU1M-LZDlANiTSpx3BxwGqpFgi_Ck8WME_usmhA"
+cookies =""
 http = "http"
 
 #多线程
