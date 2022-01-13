@@ -7,12 +7,14 @@ import os
 import re
 from lxml import etree
 
+
+
 cookies =""
 http = "http"
 
 #多线程
 def Th(search,filename,pageend): 
-    with open('{}.txt'.format(filename), 'a') as f:
+    with open('C:\\Users\\o10\\Desktop\\FofaEzSpider\\{}.txt'.format(filename), 'a') as f:
         l = list(range(1, pageend+1))
         thread_list =[]
         for i in l:
@@ -24,7 +26,7 @@ def Th(search,filename,pageend):
             t.join() 
         f.close()
 def pageend(search):
-    url = 'https://fofa.so/result?page=1&q={}&qbase64={}'.format(quote(search), quote(base64.b64encode(search.encode('utf-8'))))
+    url = 'https://fofa.so/result?page=1&q={}&qbase64={}&full=true'.format(quote(search), quote(base64.b64encode(search.encode('utf-8'))))
     data = requests.get(url, headers = {"Cookie": cookies}).text
     if 'Retry later' in data:
         print('Get the page_end again')
@@ -49,14 +51,14 @@ def pageend(search):
             page = int(total/10)+1          
         else:
             page_end = 1
-        print('共有数据' + str(total) + '条,共有' + str(page_end) + '页,爬取'+str(page_end)+'页')
+        print('共有数据' + str(total) + '条,共能爬取' + str(page_end) + '页,爬取'+str(page_end)+'页')
     return page_end  
 
 def getData(page,search,f):
     if pageend >= 5:
         pool_sema.acquire()
     print('[START] Page '+str(page))
-    url = 'https://fofa.so/result?page={}&q={}&qbase64={}'.format(str(page), quote(search), quote(base64.b64encode(search.encode('utf-8'))))
+    url = 'https://fofa.so/result?page={}&q={}&qbase64={}&full=true'.format(str(page), quote(search), quote(base64.b64encode(search.encode('utf-8'))))
     data = requests.get(url, headers = {"Cookie": cookies}).text
     if 'Retry later' in data:
         print('[!!!!!!]'+str(page)+'[!!!!!]')
@@ -75,7 +77,7 @@ def getData(page,search,f):
     else:
         print("请检查cookies是否设置正确")
         f.close()
-        os._exit(1)
+        os._exit(1) 
     for x in ret:
         f.write(x+'\n')
         f.flush()
