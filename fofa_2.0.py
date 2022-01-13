@@ -14,7 +14,7 @@ http = "http"
 
 #多线程
 def Th(search,filename,pageend): 
-    with open('C:\\Users\\o10\\Desktop\\FofaEzSpider\\{}.txt'.format(filename), 'a') as f:
+    with open('{}.txt'.format(filename), 'a') as f:
         l = list(range(1, pageend+1))
         thread_list =[]
         for i in l:
